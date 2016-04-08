@@ -51,11 +51,11 @@ pw: IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
 
 Level 12 -> Level 13
 ssh bandit12@bandit.labs.overthewire.org
-pw: 
+pw: 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
 
 Level 13 -> Level 14
 ssh bandit13@bandit.labs.overthewire.org
-pw: 
+pw: 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
 
 Level 14 -> Level 15
 ssh bandit14@bandit.labs.overthewire.org
