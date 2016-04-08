@@ -59,31 +59,30 @@ pw: 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
 
 Level 14 -> Level 15
 ssh bandit14@bandit.labs.overthewire.org
-pw: 
+pw: 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
 
 Level 15 -> Level 16
 ssh bandit15@bandit.labs.overthewire.org
-pw: 
+pw: BfMYroe26WYalil77FoDi9qh59eK5xNr
 
 Level 16 -> Level 17
 ssh bandit16@bandit.labs.overthewire.org
-pw: 
+pw: cluFn7wTiGryunymYOu4RcffSxQluehd
 
 Level 17 -> Level 18
-ssh bandit17@bandit.labs.overthewire.org
-pw: 
+ssh bandit17@bandit.labs.overthewire.org -i ./level_17.key
 
 Level 18 -> Level 19
 ssh bandit18@bandit.labs.overthewire.org
-pw: 
+pw: kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
 
 Level 19 -> Level 20
 ssh bandit19@bandit.labs.overthewire.org
-pw: 
+pw: IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
 
 Level 20 -> Level 21
 ssh bandit20@bandit.labs.overthewire.org
-pw: 
+pw: GbKksEFF4yrVs6il55v6gwY5aVje5f0j
 
 Level 21 -> Level 22
 ssh bandit21@bandit.labs.overthewire.org
