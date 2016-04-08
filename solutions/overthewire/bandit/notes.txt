@@ -1,9 +1,8 @@
-Len = 32
+Password Len = 32
 
 Level 0 -> Level 1
 ssh bandit0@bandit.labs.overthewire.org
 pw: bandit0
-key: boJ9jbbUNNfktd78OOpsqOltutMc3MY1
 
 Level 1 -> Level 2
 ssh bandit1@bandit.labs.overthewire.org
