@@ -1,3 +1,12 @@
+###############################################################################
+# I originally developed this script for the Nuit du Hack CTF Quals 2016,
+# specifically, the Matryoshka challenges (1-4).  However, I later realized
+# this was a waste of time.  I could have accomplished the same with the
+# following simple command:
+#	$ base64 -d input_b64encode.txt > decodedoutputfile
+#
+# Author: Aaron Gallagher <aaron.b.gallagher@gmail.com>
+###############################################################################
 import base64
 import sys
 
