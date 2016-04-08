@@ -1,3 +1,4 @@
+http://overthewire.org/wargames/bandit/
 Password Len = 32
 
 Level 0 -> Level 1
@@ -42,11 +43,11 @@ pw: UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
 
 Level 10 -> Level 11
 ssh bandit10@bandit.labs.overthewire.org
-pw: 
+pw: truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
 
 Level 11 -> Level 12
 ssh bandit11@bandit.labs.overthewire.org
-pw: 
+pw: IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
 
 Level 12 -> Level 13
 ssh bandit12@bandit.labs.overthewire.org
