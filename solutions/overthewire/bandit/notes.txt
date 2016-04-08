@@ -1,0 +1,114 @@
+Len = 32
+
+Level 0 -> Level 1
+ssh bandit0@bandit.labs.overthewire.org
+pw: bandit0
+key: boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+
+Level 1 -> Level 2
+ssh bandit1@bandit.labs.overthewire.org
+pw: boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+
+Level 2 -> Level 3
+ssh bandit2@bandit.labs.overthewire.org
+pw: CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+
+Level 3 -> Level 4
+ssh bandit3@bandit.labs.overthewire.org
+pw: UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
+
+Level 4 -> Level 5
+ssh bandit4@bandit.labs.overthewire.org
+pw: pIwrPrtPN36QITSp3EQaw936yaFoFgAB
+
+Level 5 -> Level 6
+ssh bandit5@bandit.labs.overthewire.org
+pw: koReBOKuIDDepwhWk7jZC0RTdopnAYKh
+
+Level 6 -> Level 7
+ssh bandit6@bandit.labs.overthewire.org
+pw: DXjZPULLxYr17uwoI01bNLQbtFemEgo7
+
+Level 7 -> Level 8
+ssh bandit7@bandit.labs.overthewire.org
+pw: HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
+
+Level 8 -> Level 9
+ssh bandit8@bandit.labs.overthewire.org
+pw: cvX2JJa4CFALtqS87jk27qwqGhBM9plV
+
+Level 9 -> Level 10
+ssh bandit9@bandit.labs.overthewire.org
+pw: UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
+
+Level 10 -> Level 11
+ssh bandit10@bandit.labs.overthewire.org
+pw: 
+
+Level 11 -> Level 12
+ssh bandit11@bandit.labs.overthewire.org
+pw: 
+
+Level 12 -> Level 13
+ssh bandit12@bandit.labs.overthewire.org
+pw: 
+
+Level 13 -> Level 14
+ssh bandit13@bandit.labs.overthewire.org
+pw: 
+
+Level 14 -> Level 15
+ssh bandit14@bandit.labs.overthewire.org
+pw: 
+
+Level 15 -> Level 16
+ssh bandit15@bandit.labs.overthewire.org
+pw: 
+
+Level 16 -> Level 17
+ssh bandit16@bandit.labs.overthewire.org
+pw: 
+
+Level 17 -> Level 18
+ssh bandit17@bandit.labs.overthewire.org
+pw: 
+
+Level 18 -> Level 19
+ssh bandit18@bandit.labs.overthewire.org
+pw: 
+
+Level 19 -> Level 20
+ssh bandit19@bandit.labs.overthewire.org
+pw: 
+
+Level 20 -> Level 21
+ssh bandit20@bandit.labs.overthewire.org
+pw: 
+
+Level 21 -> Level 22
+ssh bandit21@bandit.labs.overthewire.org
+pw: 
+
+Level 22 -> Level 23
+ssh bandit22@bandit.labs.overthewire.org
+pw: 
+
+Level 23 -> Level 24
+ssh bandit23@bandit.labs.overthewire.org
+pw: 
+
+Level 24 -> Level 25
+ssh bandit24@bandit.labs.overthewire.org
+pw: 
+
+Level 25 -> Level 26
+ssh bandit25@bandit.labs.overthewire.org
+pw: 
+
+Level 26 -> Level 27
+ssh bandit26@bandit.labs.overthewire.org
+pw: 
+
+Level 27
+ssh bandit27@bandit.labs.overthewire.org
+pw: 
