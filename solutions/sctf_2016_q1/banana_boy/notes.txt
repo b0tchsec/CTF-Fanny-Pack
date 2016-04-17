@@ -1,0 +1,15 @@
+Banana Boy
+20 points
+Forensics
+
+Carter loves bananas, but I heard a rumor that he's hiding something!
+
+Can you find it?
+
+Hint: Is it really just an image?
+
+Solution:
+	$ foremost -o carter_extracted carter.jpg
+
+Flag:
+	sctf{tfw_d4nk_m3m3s_w1ll_a1w4y5_pr3v4il}
