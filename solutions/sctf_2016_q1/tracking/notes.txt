@@ -1,0 +1,67 @@
+Tracking
+85 points
+Algorithmic
+
+
+Global Positioning Systems[https://en.wikipedia.org/wiki/Global_Positioning_System] (GPS) use satellites to trilaterate[https://en.wikipedia.org/wiki/Trilateration] a device's position on Planet Earth. You will need to use a very similar method to solve this problem. Download the description and input file to get started!
+
+
+Writeup:
+Attached is a plain-text file(tracking.in) containg information about a GPS tracking log.  Additionally, we also have another plain-text file(description.txt) which explains how to read the GPS data and make the necessary calculations to generate the flag.  The file explains that each line in the tracking log describes distances from 4 different sattelites.  Using these 4 measurements, we can calculate the x,y,z cooridate location.  In order to discover the flag, we will have to find the x,y,z values for each coordinate and then compute the average, and then format the flag like sctf{xAverage, yAverage, zAverage}.  The author of the problem did us a HUGE favor by providing the Wikipedia link to trilateration in the description.  It turns out Wikipedia provides us with the exact formulas needed to solve this problem.  Wikipedia never fails!!
+
+My python code is simply an implementation of the formulas described here: https://en.wikipedia.org/wiki/Trilateration#Derivation
+
+So I compared the formulas on Wikipedia with those attached with the problem.
+
+From problem(description.txt):
+ *      d_{1}^2=x^2+y^2+z^2
+ *      d_{2}^2=(x-p)^2+y^2+z^2
+ *      d_{3}^2=(x-q)^2+(y-r)^2+z^2
+ *      d_{4}^2=(x-s)^2+(y-t)^2+(z-u)^2
+
+From wikipeda:
+
+    r_1^2=x^2+y^2+z^2 \, 
+
+    r_2^2=(x-d)^2+y^2+z^2 \, 
+
+    r_3^2=(x-i)^2+(y-j)^2+z^2 \, 
+
+It was clear to me that r_1 is equivelent to d_{1} and so on.  And it looks like when description.txt refers to p, this is equivelent to d in Wikipedia's example, and q==i, r==j.  However, Wikipedia's formulas assumed 3 satellites, not 4.  I actually hadn't noticed this until after I solved the problem.  Apparently ignoring the 4th satellite altoghether was sufficient for this problem.
+
+From problem(description.txt):
+ * To satisfy the equations above, use this info about the satellites:
+ *
+ *      Satellite A lies on the origin          (0, 0, 0)
+ *      Satellite B lies on the x-axis          (p, 0, 0)
+ *      Satellite C lies on the xy-plane        (q, r, 0)
+ *      Satellite D lies on an arbitrary point  (s, t, u)
+
+From problem(tracking.in):
+---------------------------------
+SATELLITE LOCATIONS:
+A: (0, 0, 0)
+B: (2000, 0, 0)
+C: (2000, 2000, 0)
+D: (3000, 1500, 1700)
+---------------------------------
+
+So using the satellite locations provided in trackin.in, we can fill in the following data:
+d==p==2000
+i==q==2000
+j==r==2000
+
+Now I have all the necessary information to start solving for x,y, and z.
+
+Solve for X(From Wiki):
+    x=\frac{r_1^2-r_2^2+d^2}{2d}.
+
+Solve for Y(From Wiki):
+    y=\frac{r_1^2-r_3^2+i^2+j^2}{2j}-\frac{i}{j}x.
+
+Solve for Z(From Wiki):
+    z=\pm \sqrt{r_1^2-x^2-y^2}. 
+
+Finally, I converted the above work into a python script to calculate x,y,z for every coordinate and finally compute the averages and print the flag.
+
+Flag: sctf{537, 516, 487}
