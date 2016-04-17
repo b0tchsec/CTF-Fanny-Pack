@@ -1,0 +1,11 @@
+hevc
+Misc (50 pts)
+
+Welcome to the future.
+
+-----------
+
+$ mkdir extracted_img
+$ ffmpeg -i out_743a4e0cbbfae017e5197b303c82aa52.raw -filter:v fps=fps=29.75 extracted_img/$filename%d.bmp
+
+flag: pctf{dat_codec_tho}
