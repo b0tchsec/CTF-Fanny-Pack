@@ -95,4 +95,6 @@ Found this...
 
 Frame# 5212
 
+Extract the zip, which contains flag.jpg.  The following flag is clearly displayed in the image.
+
 Flag: PCTF{LOOK_MA_NO_SSL}
