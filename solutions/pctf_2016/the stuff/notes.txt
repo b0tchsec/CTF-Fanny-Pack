@@ -1,0 +1,98 @@
+the stuff
+Misc (50 pts)
+
+Can you believe Ryan uses Bing?
+
+
+-------------------------------
+Solution:
+
+Extract the compressed file to find a packet capture.
+
+First thing in the packet capture is an email sent with an attachment (encoded in base64).
+
+PV)!kE,'@@xx.H
+3o<IDate: Sat, 16 Apr 2016 16:58:08 -0700
+Content-Type: multipart/mixed; boundary="=-zAAY+FBv9yZgwoZy4KHy"
+X-Mailer: Evolution 3.10.4-0ubuntu2 
+Mime-Version: 1.0
+
+
+--=-zAAY+FBv9yZgwoZy4KHy
+Content-Type: text/plain
+Content-Transfer-Encoding: 7bit
+
+Yo, I got the stuff.
+
+
+--=-zAAY+FBv9yZgwoZy4KHy
+Content-Type: application/zip; name="flag.zip"
+Content-Disposition: attachment; filename="flag.zip"
+Content-Transfer-Encoding: base64
+
+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
+
+.....
+
+The zip file, needs a password though...
+
+I used the following to get rid of the bing traffic to make the logs somewhat readable.
+
+Wireshark Filter:
+	ip.src!=204.79.197.200 and ip.dst!=204.79.197.200
+
+Found this...
+	Yo, you'll need this too: super_password1  
+
+Frame# 5212
+
+Flag: PCTF{LOOK_MA_NO_SSL}
