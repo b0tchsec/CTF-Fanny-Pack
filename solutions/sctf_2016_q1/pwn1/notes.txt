@@ -1,0 +1,21 @@
+pwn1
+70 points
+Solved 80 times
+Pwning
+
+I'll convert a first person statement to a second person statement. I even wrote it in C++ to be super-safe about my strings!
+
+nc problems2.2016q1.sctf.io 1337
+
+
+
+#############################################################################################
+
+The application asks you to say something about yourself.  It then replaces any ocurances of the letter 'I' with the word 'you'.  Using this, you can cause a buffer overflow on the string.  The goal is to override the return memory address with the address corresponding with the function get_flag(), which will execute "cat flag.txt".
+
+Payload structure:
+	'A' + 'I'*21 + GET_FLAG_MEMORY_ADDR
+
+We add the 'A' in front to offset the padding, which ensures that the address for get_flag() ends up in the correct position.
+
+Flag: sctf{srcpy_was_a_mistake}
