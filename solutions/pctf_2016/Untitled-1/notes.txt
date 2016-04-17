@@ -1,0 +1,14 @@
+Untitled-1.pdf
+Misc (50 pts)
+
+This PDF has a flag on it, but I can't find it... can you?
+
+
+
+Solution:
+$ gem install pdf-extract
+
+pdf-extract extract --regions Untitled-1_1a110935ec70b63ad09fec68c89dfacb.pdf 
+
+Flag:
+PCTF{how_2_pdf_yo}
