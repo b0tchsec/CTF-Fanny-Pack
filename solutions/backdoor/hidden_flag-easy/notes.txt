@@ -1,0 +1,12 @@
+Hidden Flag - Easy
+pts: 30
+tags: n00b15CTF
+
+n00b just learnt about binary files. He tried to hide a flag in it. Here is the file.
+-------------------------------
+
+Easiest binary challenge ever.
+
+$ strings ./hide_easy
+
+The longest string here is the flag.
