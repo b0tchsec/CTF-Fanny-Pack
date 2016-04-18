@@ -4,3 +4,13 @@ tags: n00b15CTF
 
 A particular file came across our team of hackers. Some say the it gives the location of a flag. Download the file here.
 -----------------------------------------------------------
+
+$ unzip search.zip
+$ file search.txt 
+search.txt: JPEG image data, JFIF standard 1.01, resolution (DPI), density 1x1, segment length 16, baseline, precision 8, 200x200, frames 1
+
+$ mv search.txt search.jpg
+
+Scanned with a QR scanner app on my phone...
+
+Contains URL to a site hosting flag.txt which has the flag to submit.
