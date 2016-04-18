@@ -1,0 +1,6 @@
+Search
+pts: 30
+tags: n00b15CTF
+
+A particular file came across our team of hackers. Some say the it gives the location of a flag. Download the file here.
+-----------------------------------------------------------
