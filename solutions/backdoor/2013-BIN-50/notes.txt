@@ -1,0 +1,32 @@
+
+Dissasembly
+
+.text:08048950
+.text:08048950 loc_8048950:                            ; CODE XREF: main+37j
+.text:08048950                                         ; main+4Ej
+.text:08048950                 mov     byte ptr [esp+20h], 4Dh
+.text:08048955                 mov     byte ptr [esp+21h], 61h
+.text:0804895A                 mov     byte ptr [esp+22h], 73h
+.text:0804895F                 mov     byte ptr [esp+23h], 74h
+.text:08048964                 mov     byte ptr [esp+24h], 65h
+.text:08048969                 mov     byte ptr [esp+25h], 72h
+.text:0804896E                 mov     byte ptr [esp+26h], 6Eh
+.text:08048973                 mov     byte ptr [esp+27h], 61h
+.text:08048978                 mov     byte ptr [esp+28h], 6Dh
+.text:0804897D                 mov     byte ptr [esp+29h], 65h
+.text:08048982                 mov     byte ptr [esp+2Ah], 72h
+.text:08048987                 mov     eax, [esp+1Ch]
+.text:0804898B                 add     eax, 4
+.text:0804898E                 mov     eax, [eax]
+.text:08048990                 lea     edx, [esp+20h]
+.text:08048994                 mov     [esp+4], edx    ; char *
+.text:08048998                 mov     [esp], eax      ; s
+.text:0804899B                 call    _Z7strcmprPcS_  ; strcmpr(char *,char *)
+.text:080489A0                 test    eax, eax
+.text:080489A2                 setz    al
+.text:080489A5                 test    al, al
+.text:080489A7                 jz      short loc_80489B0
+.text:080489A9                 call    _Z4flagv        ; flag(void)
+
+
+This snippet of code is moving bytes into esp+20h.  Then it compares the argument provided by the user with the bytes it just moved into memory.  If they are same, it will call the flag function.  Otherwise, it will exit.  Simply convert the bytes to ascii for the password.  Then launch binary with first argument being the password.  The binary will return some random letters.  Submit the sha256sum of these numbers as your answer.
