@@ -1,0 +1,6 @@
+Make a new folder
+Mount the file to that new folder
+Inside the folder, you will find a *.7z file.  Copy that outside of the mounted folder.
+Extract with 7zip to revel another folder.
+Inside that folder is finally the *.txt file containg the flag.
+Submit the sha256sum of the flag txt.
