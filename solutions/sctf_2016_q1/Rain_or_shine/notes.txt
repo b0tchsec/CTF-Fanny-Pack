@@ -1,0 +1,21 @@
+Rain or Shine
+35 points
+Solved 48 times
+Forensics  Zachary Taylor
+
+I've been working so hard on problems that I didn't even notice it was raining outside. I decided to take a short break and record some ambient sound for a game I've been working on, and just for fun I stuck a flag somewhere in there too! Can you find it for me?
+
+
+I started with running binwalk on the provided *.wav file.  Below was the ouptut:
+
+$ binwalk rain.wav 
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+5831936       0x58FD00        TIFF image data, little-endian
+
+Great, we have a hidden TIFF image.  Normally I would just add the '-e' argument to my binwalk command to have it extract the file.  Unfrotunately, it did not extract it for some reason.  However, binwalk has still provided us with the position in the file where the TIFF image begins.  So I wrote a simply python script(solver.py) to strip off the first 5831936 bytes of data (audio), leaving us with the .TIFF image by itself.
+
+Inside rain.wav we find a hidden tiff file. Extracting that out (Ask Aaron), it appears to be an image with four layers, and it vaguely resembles a QR code. But the QR code spec tells us that the squares should be in the top left, top right, and bottom left corner. So let's rearrange the layers to match the spec, being careful to line things up with no gaps or overlaps. Scan the QR code output with a QR code scanner or submit it to an online QR decoding tool such as https://zxing.org/w/decode.jspx
+
+sctf{5t3g0n4gr4phy_i5_fun_r1t3?}
