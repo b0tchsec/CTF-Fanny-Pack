@@ -142,7 +142,7 @@ key: "User-Agent"
 value: "opabina-regalis.go"
 ```
 
-Hmm...  Looks like someone is trying to connect to '/not-token'.  What if I create a new request for '/token'
+Hmm...  Looks like someone is trying to connect to '/not-token'.  What if I create a new request for '/token' instead.
 ```python
 new_dat = main_pb2.Exchange()
 new_dat.request.ver = main_pb2.Exchange.GET
