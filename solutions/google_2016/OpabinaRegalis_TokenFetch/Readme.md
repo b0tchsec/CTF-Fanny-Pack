@@ -162,3 +162,5 @@ value: "opabina-regalis.go"
 
 Body: 'CTF{WhyDidTheTomatoBlush...ItSawTheSaladDressing}'
 ```
+
+[Click here for entire Python implementation](https://github.com/b0tchsec/CTF-Fanny-Pack/blob/master/solutions/google_2016/OpabinaRegalis_TokenFetch/client.py)
