@@ -5,6 +5,7 @@
 **Solves:** 79
 **Description:**
 
+
 >
 >There are a variety of client side machines that have access to certain websites we'd like to access. We have a system in place, called "Opabina Regalis" where we can intercept and modify HTTP requests on the fly. Can you implement some attacks to gain access to those websites?
 >
@@ -12,9 +13,11 @@
 >
 >Here's the protocol buffer definition used:
 >
->package main;
 >
->message Exchange {
+>     package main;
+>
+>     message Exchange {
+>
 >        enum VerbType {
 >                GET = 0;
 >                POST = 1;
@@ -42,13 +45,14 @@
 >                Request request = 1;
 >                Reply reply = 2;
 >        }
->}
+>     }
 >
->
+
 >The network protocol uses a 32-bit little endian integer representing the length of the marshalled protocol buffer, followed by the marshalled protocol buffer.
 >
 >Listening on port 1876 on ssl-added-and-removed-here.ctfcompetition.com
 >
+
 
 ## Write-up
 
