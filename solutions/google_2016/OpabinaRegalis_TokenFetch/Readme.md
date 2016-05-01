@@ -113,7 +113,8 @@ def rx_msg(sock):
 And the code for writing to the socket.
 ```python
 def tx_msg(sock, msg):
-  p = pack_msg(msg.SerializeToString())
+  data = msg.SerializeToString()
+  p = struct.pack('<I', len(data)) + data
   sock.send(p)
 ```
 
