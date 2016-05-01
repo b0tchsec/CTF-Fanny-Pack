@@ -56,9 +56,11 @@
 
 ## Write-up
 
+### Research
 In order to solve this problem, I had to learn a little bit about Protocol buffer.  I started by reading the documentation that was linked in the challenge description.  It looks like Google supports a few different languages, so I decided to go with Python.  But first I had to install the protocol buffer compiler (protoc).
 
 
+### Protocol Buffer Compiler Setup
 Download the protocl buffer project
 ```
 $ git clone https://github.com/google/protobuf.git
@@ -89,6 +91,7 @@ import main_pb2
 msg = main_pb2.Exchange()
 ```
 
+### Client Code
 Once I verified that I could import main_pb2, I setup the TCP/SSL socket as such:
 ```python
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -129,6 +132,7 @@ def print_req(req):
   print('Body: ' + repr(req.body))
 ```
 
+### Exploit
 I should be all set, let's connect to the socket and see if I get a request.
 ```
 VerbType: 0
