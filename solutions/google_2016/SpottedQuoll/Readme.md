@@ -65,7 +65,7 @@ f.close()
 
 #load the pickle
 obsoletePickle = pickle.load(open('tmp.p', 'rb'))
-print('Real Pickle:\n%s\n' % str(obsoletePickle))
+print('%s' % str(obsoletePickle))
 ```
 
 Print the pickle data
