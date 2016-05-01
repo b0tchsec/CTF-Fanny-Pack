@@ -12,16 +12,16 @@
 ### Investigate
 Upon opening the caputre file with Wireshark, it's immediatly obvious that it contains USB traffic.  However, it wasn't obvious to me what device(s) the traffic is for.  I sorted the logs by 'Protocol' hoping for a protocol at a layer above USB.  Sure enough, there is one USBHID message.
 
-My initial assumption was that this was keyboard traffic.  But intuitively speaking, the data didn't appear to contain keypresses.  So after a few moments of looking at the logs, I remembered reading a writeup a few months ago for a CTF in which they were given a capture file containing USB traffic.
+My initial assumption was that this was keyboard traffic.  But intuitively, the data didn't appear to contain keypresses.  So after a few moments of looking at the logs, I remembered reading a writeup a few months ago for a CTF in which they were given a capture file containing USB traffic.
 
-Sure enough, I found the writeup!  The great folks at wiremask have written a great [writeup](https://wiremask.eu/writeups/boston-key-party-2015-riverside/) that helped me a tremendous amount in solving this challenge.
+Sure enough, I found the writeup!  The folks at wiremask have written a great [writeup](https://wiremask.eu/writeups/boston-key-party-2015-riverside/) that helped me a tremendous amount in solving this challenge.
 
-Using this filter, I was able to find the vendor and product ID
+Using this filter:
 ```
 usb.bDescriptorType
 ```
 
-USB Details
+I was able to find the USB vendor and product ID:
 ```
 idVendor: Logitech, Inc. (0x046d)
 idProduct: M90/M100 Optical Mouse (0xc05a)
@@ -35,7 +35,7 @@ I extracted the mouse data from the pcap-ng file using tshark.
 $ tshark -r ./capture.pcapng -T fields -e usb.capdata > mouse_traffic.txt
 ```
 
-Next, I wrote some code to read the mouse data into memory.
+Next, I wrote some code to read the mouse data from text into memory.
 ```python
 def parse_traffic_file(traffic_file):
   f = open(traffic_file, 'r')
