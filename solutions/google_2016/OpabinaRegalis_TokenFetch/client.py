@@ -48,10 +48,11 @@ def rx_msg(sock):
 	if len(data) == 0:
 		raise Exception('No data...')
 
+	#Unpack the message length
 	msg_len = struct.unpack('<I', data)[0]
 	data = sock.recv(msg_len)
-	print(repr(data))
 
+	#Read the protocol buffer message
 	main_msg = main_pb2.Exchange()
 	main_msg.ParseFromString(data)
 	return main_msg

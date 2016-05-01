@@ -1,4 +1,3 @@
-'\n0\x08\x00\x12\n/not-token\x1a \n\nUser-Agent\x12\x12opabina-regalis.go'
 VerbType: 0
 URI: u'/not-token'
 Headers:
@@ -6,7 +5,6 @@ key: "User-Agent"
 value: "opabina-regalis.go"
 
 Body: ''
-'\x12T\x08\xc8\x01\x12\x1c\n\x06Server\x12\x12opabina-regalis.go\x1a1CTF{WhyDidTheTomatoBlush...ItSawTheSaladDressing}'
 Status: 200
 Headers:
 key: "Server"
