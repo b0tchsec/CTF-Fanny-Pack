@@ -85,7 +85,9 @@ def plot_mouse_traffic(mouse_data):
 ```
 
 ### Output
-(image)
+![alt text](https://raw.githubusercontent.com/b0tchsec/CTF-Fanny-Pack/master/solutions/google_2016/For2/mouse_traffic.png "mouse_traffic.png")
 
-After a little bruteforce, I finally get the scoreboard to accept the flag.
-Flag: 
+After a little bruteforce to get the capitalization right, I finally get the scoreboard to accept the flag.
+```
+Flag: CTF{tHE_cAT_iS_the_cULpRiT}
+```
