@@ -1,4 +1,4 @@
-# Google CTF 2016 : Opabina Regalis - Token Fetch
+# Google CTF 2016 : For2
 
 **Category:** Forensics
 **Points:** 200
