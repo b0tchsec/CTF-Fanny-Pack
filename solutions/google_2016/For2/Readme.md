@@ -91,3 +91,5 @@ After a little bruteforce to get the capitalization right, I finally get the sco
 ```
 Flag: CTF{tHE_cAT_iS_the_cULpRiT}
 ```
+
+[Complete Python script](https://github.com/b0tchsec/CTF-Fanny-Pack/blob/master/solutions/google_2016/For2/decoder.py)
