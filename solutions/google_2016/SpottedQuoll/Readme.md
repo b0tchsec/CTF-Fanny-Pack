@@ -29,22 +29,9 @@ I have heard of 'pickle' before.  It's a format for serializing data, usually ov
 
 However, the pickle could be simply encoded in another format, perhaps base64....
 ```
-Base64:
-KGRwMQpTJ3B5dGhvbicKcDIKUydwaWNrbGVzJwpwMwpzUydzdWJ0bGUnCnA0ClMnaGludCcKcDUKc1MndXNlcicKcDYKTnMu
-
-PlainTxt:
-(dp1
-S'python'
-p2
-S'pickles'
-p3
-sS'subtle'
-p4
-S'hint'
-p5
-sS'user'
-p6
-Ns.
+>>> from base64 import b64decode
+>>> b64decode('KGRwMQpTJ3B5dGhvbicKcDIKUydwaWNrbGVzJwpwMwpzUydzdWJ0bGUnCnA0ClMnaGludCcKcDUKc1MndXNlcicKcDYKTnMu')
+"(dp1\nS'python'\np2\nS'pickles'\np3\nsS'subtle'\np4\nS'hint'\np5\nsS'user'\np6\nNs."
 ```
 
 Ok, that looks a lot more like pickle data to me, let's load it up in Python.
