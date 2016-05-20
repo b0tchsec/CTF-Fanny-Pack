@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # read file contents into memory
 f = open('ce6e1a612a1da91648306ace0cf7151e6531abc9.pcapng', 'rb')
 content = f.read()
