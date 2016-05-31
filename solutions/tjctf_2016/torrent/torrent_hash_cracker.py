@@ -38,4 +38,5 @@ def main():
     print(flag)
 
 
-main()
+if __name__ == "__main__":
+    main()
