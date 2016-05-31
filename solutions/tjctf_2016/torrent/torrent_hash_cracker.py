@@ -21,21 +21,21 @@ PIECE_HASHES = [
 
 
 def crack(shahash):
-	for x in range(127):
-		for y in range(127):
-			attempt = chr(x) + chr(y)
-			res = sha.new(attempt).hexdigest()
-			if res == shahash:
-				return attempt
+    for x in range(127):
+        for y in range(127):
+            attempt = chr(x) + chr(y)
+            res = sha.new(attempt).hexdigest()
+            if res == shahash:
+                return attempt
 
-	print('Failed: ' + shahash)
+    raise Exception('Failed to crack the hash: ' + shahash)
 
 
 def main():
-	flag = ''
-	for i in PIECE_HASHES:
-		flag += crack(i)
-	print(flag)
+    flag = ''
+    for i in PIECE_HASHES:
+        flag += crack(i)
+    print(flag)
 
 
 main()
