@@ -1,0 +1,317 @@
+[*] Opening connection to p.tjctf.org on port 8006: 
+[*] Opening connection to p.tjctf.org on port 8006: Trying 2001:468:cc0:2101:5054:ff:fe70:40b4
+[*] Opening connection to p.tjctf.org on port 8006: Trying 198.38.21.150
+[+] Opening connection to p.tjctf.org on port 8006: Done
+50 turns remain
+You are currently in: Clearing
+
+You're not quite in the forest, but you're not quite in town either. You can
+see buildings in the distance, to the north.
+
+Here you see tree.
+Exits: south, north
+> 
+It's just a regular tree.
+49 turns remain
+You are currently in: Clearing
+
+You're not quite in the forest, but you're not quite in town either. You can
+see buildings in the distance, to the north.
+
+Here you see tree.
+Exits: south, north
+> 
+48 turns remain
+You are currently in: Forest
+
+You are in a forest. You can see the Mystery Shack to the south.
+
+Here you see paper.
+Exits: south, north
+> 
+It looks like a blank piece of paper. Upon closer inspection, you can barely
+read some text. It looks like part of a flag, written in invisible ink. If
+only you had something to read it with...
+
+47 turns remain
+You are currently in: Forest
+
+You are in a forest. You can see the Mystery Shack to the south.
+
+Here you see paper.
+Exits: south, north
+> 
+46 turns remain
+You are currently in: Mystery Shack Gift Shop
+
+The first floor of the Mystery Shack consists of a gift shop with numerous
+novelties.
+
+Here you see rug, eyeballjar, cashregister.
+Exits: up, north
+> 
+You always knew Grunkle Stan kept his arrest warrants under the rug, but you
+didn't know that he kept parts of his flag under the rug:
+
+tjctf{y0u_m1ght_h@v3_
+45 turns remain
+You are currently in: Mystery Shack Gift Shop
+
+The first floor of the Mystery Shack consists of a gift shop with numerous
+novelties.
+
+Here you see rug, eyeballjar, cashregister.
+Exits: up, north
+> 
+Ick, it's a jar with a floating eyeball inside.
+44 turns remain
+You are currently in: Mystery Shack Gift Shop
+
+The first floor of the Mystery Shack consists of a gift shop with numerous
+novelties.
+
+Here you see rug, eyeballjar, cashregister.
+Exits: up, north
+> 
+There sure is a lot of money in here.
+43 turns remain
+You are currently in: Mystery Shack Gift Shop
+
+The first floor of the Mystery Shack consists of a gift shop with numerous
+novelties.
+
+Here you see rug, eyeballjar, cashregister.
+Exits: up, north
+> 
+42 turns remain
+You are currently in: Mystery Shack Attic
+
+The second floor of the Mystery Shack is an attic with a few rooms.
+
+Exits: west, down, east
+> 
+41 turns remain
+You are currently in: Attic room
+
+It's a mostly empty room.
+
+Here you see uvlight.
+Exits: east
+> 
+An ultraviolet light source.
+You take the UV light.
+40 turns remain
+You are currently in: Attic room
+
+It's a mostly empty room.
+
+Exits: east
+> 
+39 turns remain
+You are currently in: Mystery Shack Attic
+
+The second floor of the Mystery Shack is an attic with a few rooms.
+
+Exits: west, down, east
+> 
+38 turns remain
+You are currently in: Mystery Shack Gift Shop
+
+The first floor of the Mystery Shack consists of a gift shop with numerous
+novelties.
+
+Here you see rug, eyeballjar, cashregister.
+Exits: up, north
+> 
+37 turns remain
+You are currently in: Forest
+
+You are in a forest. You can see the Mystery Shack to the south.
+
+Here you see paper.
+Exits: south, north
+> 
+It looks like a blank piece of paper. Upon closer inspection, you can barely
+read some text. It looks like part of a flag, written in invisible ink. If
+only you had something to read it with...
+
+Aha! You shine the UV light on the paper, and read:
+
+YOUR_A1M_IS_G3TT1NG_B3TT3R}
+36 turns remain
+You are currently in: Forest
+
+You are in a forest. You can see the Mystery Shack to the south.
+
+Here you see paper.
+Exits: south, north
+> 
+35 turns remain
+You are currently in: Clearing
+
+You're not quite in the forest, but you're not quite in town either. You can
+see buildings in the distance, to the north.
+
+Here you see tree.
+Exits: south, north
+> 
+34 turns remain
+You are currently in: Town
+
+You're in a town. To the east and west are buildings.
+
+Here you see lamppost.
+Exits: west, east, south, north
+> 
+It's just a regular lamppost.
+33 turns remain
+You are currently in: Town
+
+You're in a town. To the east and west are buildings.
+
+Here you see lamppost.
+Exits: west, east, south, north
+> 
+32 turns remain
+You are currently in: Library
+
+You're standing in a library, surrounded by books.
+
+Here you see journal2.
+Exits: east
+> 
+This book appears to have a gold six-fingered hand glued to the front, with the
+number "2" written on it. The book looks strangely familiar, but you can't seem
+to place it. You feel that it is out of place. You flip through the pages, and
+note some interesting text towards the end:
+
+b33n_m1$sing_t3h_
+
+There is also a section on cryptography. You memorize it, just in case.
+You have gained the cryptography skill!
+31 turns remain
+You are currently in: Library
+
+You're standing in a library, surrounded by books.
+
+Here you see journal2.
+Exits: east
+> 
+30 turns remain
+You are currently in: Town
+
+You're in a town. To the east and west are buildings.
+
+Here you see lamppost.
+Exits: west, east, south, north
+> 
+29 turns remain
+You are currently in: Museum of History
+
+You're standing in the Museum of History, surrounded by exhibits. There is an
+exhibit hallway to the east.
+
+Exits: west, east
+> 
+28 turns remain
+You are currently in: Exhibit Hall
+
+You are surrounded by visual documentation of this town's past. None of it seems
+to be recent. Also a lot of eyes are mounted on the wall.
+
+Here you see fireplace, paintedeye.
+Exits: west
+> 
+This eye is painted on a part of the wall that is outset from the rest. You
+try to push it into the wall, and the fireplace is replaced with a staircase!
+27 turns remain
+You are currently in: Exhibit Hall
+
+You are surrounded by visual documentation of this town's past. None of it seems
+to be recent. Also a lot of eyes are mounted on the wall.
+
+Here you see paintedeye.
+Exits: west, down
+> 
+26 turns remain
+You are currently in: Meeting Room
+
+You are in a room that appears to be hundreds of years older than the rest of
+the building. Several pnuematic tubes are mounted to the ceiling, and an eye
+with a cross through it is drawn on the wall opposite you. You feel like someone
+is watching you. On a table is a book.
+
+Here you see book.
+Exits: up
+> 
+It's just a regular book.
+
+Wait, no it's not. You flip through the pages, and see some odd text. It seems
+to be encoded with some strange scheme...
+Fortunately, the knowledge of cryptography you gained from reading the strange
+book with the gold hand lets you decode it. It says:
+    
+SOMETHING IS HIDDEN IN THE TREE IN THE CLEARING
+25 turns remain
+You are currently in: Meeting Room
+
+You are in a room that appears to be hundreds of years older than the rest of
+the building. Several pnuematic tubes are mounted to the ceiling, and an eye
+with a cross through it is drawn on the wall opposite you. You feel like someone
+is watching you. On a table is a book.
+
+Here you see book.
+Exits: up
+> 
+24 turns remain
+You are currently in: Exhibit Hall
+
+You are surrounded by visual documentation of this town's past. None of it seems
+to be recent. Also a lot of eyes are mounted on the wall.
+
+Here you see paintedeye.
+Exits: west, down
+> 
+23 turns remain
+You are currently in: Museum of History
+
+You're standing in the Museum of History, surrounded by exhibits. There is an
+exhibit hallway to the east.
+
+Exits: west, east
+> 
+22 turns remain
+You are currently in: Town
+
+You're in a town. To the east and west are buildings.
+
+Here you see lamppost.
+Exits: west, east, south, north
+> 
+21 turns remain
+You are currently in: Clearing
+
+You're not quite in the forest, but you're not quite in town either. You can
+see buildings in the distance, to the north.
+
+Here you see tree.
+Exits: south, north
+> 
+You wouldn't think to check here without reading that book...
+The tree looks metallic and dusty. You see what looks to be a door in the tree.
+Inside the tree is what appears to be a control box. You flip some switches,
+but nothing happens. Upon closer examination of the control box, you see strange
+writing. Good thing you know cryptography. It says:
+    
+fl4g_but_
+20 turns remain
+You are currently in: Clearing
+
+You're not quite in the forest, but you're not quite in town either. You can
+see buildings in the distance, to the north.
+
+Here you see tree.
+Exits: south, north
+> 
+Done
+[*] Closed connection to p.tjctf.org port 8006
