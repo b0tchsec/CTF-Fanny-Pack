@@ -8,6 +8,7 @@ from pwn import *
 ####################################################
 #CHANGE THESE PARAMS
 FILE 	= './hello_world'
+F_PARAM = [] #file arguments(if any) go here
 HOST 	= 'google.com'
 PORT 	= '-1'
 
@@ -49,7 +50,11 @@ def launch_pwn(attack_network, gdb_server, strace):
 		elif strace:
 			fileparams = ['/usr/bin/strace', FILE]
 		else:
-			fileparams = FILE
+			fileparams = [FILE]
+
+		for arg in F_PARAM:
+			fileparams.append(arg)
+
 		p = process(fileparams)
 	try:
 		pwn(p)
