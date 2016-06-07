@@ -1,0 +1,36 @@
+[*] Opening connection to 121.40.56.102 on port 2333: 
+[*] Opening connection to 121.40.56.102 on port 2333: Trying 121.40.56.102
+[+] Opening connection to 121.40.56.102 on port 2333: Done
+VSS:Very Secure System
+Password:
+
+bin
+boot
+dev
+etc
+home
+lib
+lib32
+lib64
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+sys
+tmp
+usr
+var
+
+ctf
+
+flag
+pass.enc
+vss
+
+alictf{n0t_v3ry_secure}
+
+[*] Closed connection to 121.40.56.102 port 2333
