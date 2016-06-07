@@ -27,8 +27,8 @@ def lsb_destego(img_orig, img_enc):
 
 
 def main():
-    img_orig = Image.open("original.png")
-    img_enc = Image.open("encrypted.png")
+    img_orig = Image.open('original.png')
+    img_enc = Image.open('encrypted.png')
 
     img_diff_printer(img_orig, img_enc)
 
